@@ -108,10 +108,11 @@ export default function RohanSite() {
               {/* blog content */}
               <ul className="mt-3 list-disc list-inside text-gray-700 space-y-2">
                 <li>
-                <a href="" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
+                <a href="https://medium.com/@rohanc.shah28/paradigm-shift-in-observability-ae9de34bc955" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
                     Paradigm shift in observability
                 </a>
                 </li>
+                
                 <li>
                 <a href="https://www.dynatrace.com/news/blog/insights-into-your-azure-devops-pipelines/" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
                     Insights into your Azure DevOps pipelines
