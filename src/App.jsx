@@ -1,13 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiGithub, FiLinkedin, FiDownload, FiLink2 } from 'react-icons/fi';
+import { BsFiletypePdf } from "react-icons/bs";
+import { IoBulbOutline } from "react-icons/io5";
 import TypeWriter from './components/TypeWriter';
 
 export default function RohanSite() {
   const links = [
     { href: 'https://www.linkedin.com/in/rohan-shah-sre/', label: 'LinkedIn', icon: <FiLinkedin /> },
     { href: 'mailto:rohanc.shah28@gmail.com', label: 'Email', icon: <FiMail /> },
-    { href: '/resume.pdf', label: 'Résumé', icon: <FiDownload /> },
+    { href: '/resume.pdf', label: 'Résumé', icon: <BsFiletypePdf /> },
+    { href: '#blogs', label: 'Blogs', icon: <IoBulbOutline /> },
   ];
 
   return (
@@ -17,12 +20,26 @@ export default function RohanSite() {
           <a href="/" className="font-mono text-xl">rshah.me</a>
         </div>
         <nav className="flex items-center space-x-3">
-          {links.map((l) => (
-            <a key={l.label} href={l.href} className="inline-flex items-center gap-2 px-3 py-1 rounded-md text-sm hover:bg-gray-200" target="_blank" rel="noreferrer">
-              <span className="text-lg">{l.icon}</span>
-              <span className="hidden sm:inline">{l.label}</span>
-            </a>
-          ))}
+          {links.map((l) => {
+            const isHashLink = l.href.startsWith('#');
+            return (
+              <a
+                key={l.label}
+                href={l.href}
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-md text-sm hover:bg-gray-200"
+                {...(!isHashLink && { target: "_blank", rel: "noreferrer" })}
+                onClick={(e) => {
+                  if (isHashLink) {
+                    e.preventDefault();
+                    document.querySelector(l.href)?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                <span className="text-lg">{l.icon}</span>
+                <span className="hidden sm:inline">{l.label}</span>
+              </a>
+            );
+          })}
         </nav>
       </header>
 
@@ -46,11 +63,12 @@ export default function RohanSite() {
             <div className="mt-10 bg-white font-mono border border-black-600 rounded-lg shadow-lg p-6">
               <h2 className="text-lg font-mono mb-2 text-blue-600">~/now</h2>
               <TypeWriter
-                text={`SSpecializing in Log management & analytics at scale, driving complex sales wins, mentoring teams, enabling field engineers, advising customers, and influencing product and brand strategy.`}
+                text={`SSpecializing in Log management & analytics at scale, driving complex sales wins, mentoring and enabling field engineers, advising customers, and influencing product and brand strategy.`}
                 speed={30}
               />
             </div>
-            <div className="mt-10 bg-white border border-gray-100 rounded-lg shadow-sm p-6">
+
+            <div className="mt-10 bg-white font-mono border border-black-600 rounded-lg shadow-lg p-6">
             <h2 className="text-lg font-mono text-blue-600 flex items-center gap-2"><FiLink2 />Featured Content</h2>
             <ul className="mt-3 list-disc list-inside text-gray-700 space-y-2">
                 <li>
@@ -73,11 +91,7 @@ export default function RohanSite() {
                     Dynatrace Webinar - BMO's digital first strategy
                 </a>
                 </li>
-                <li>
-                <a href="https://www.dynatrace.com/news/blog/insights-into-your-azure-devops-pipelines/" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
-                    Blog - Insights into your Azure DevOps pipelines
-                </a>
-                </li>
+
             </ul>
             </div>
             <div className="mt-6">
@@ -88,6 +102,25 @@ export default function RohanSite() {
                 ))}
               </div>
             </div>
+            <section id="blogs">
+              <div className="mt-10 bg-white border border-gray-100 rounded-lg shadow-sm p-6">
+              <h2 className="text-lg font-mono text-blue-600 flex items-center gap-2"><IoBulbOutline />Blogs</h2>
+              {/* blog content */}
+              <ul className="mt-3 list-disc list-inside text-gray-700 space-y-2">
+                <li>
+                <a href="" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
+                    Paradigm shift in observability
+                </a>
+                </li>
+                <li>
+                <a href="https://www.dynatrace.com/news/blog/insights-into-your-azure-devops-pipelines/" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
+                    Insights into your Azure DevOps pipelines
+                </a>
+                </li>
+              </ul>
+              </div>
+            </section>
+
 
             <footer className="mt-10 text-sm text-gray-500">© {new Date().getFullYear()} Rohan Shah</footer>
           </motion.div>
