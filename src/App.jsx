@@ -7,7 +7,7 @@ import TypeWriter from './components/TypeWriter';
 
 export default function RohanSite() {
   const links = [
-    { href: 'https://www.linkedin.com/in/rohan-shah-sre/', label: 'LinkedIn', icon: <FiLinkedin /> },
+    { href: 'https://www.linkedin.com/in/rshah-dt/', label: 'LinkedIn', icon: <FiLinkedin /> },
     { href: 'mailto:rohanc.shah28@gmail.com', label: 'Email', icon: <FiMail /> },
     { href: '/resume.pdf', label: 'Résumé', icon: <BsFiletypePdf /> },
     { href: '#blogs', label: 'Blogs', icon: <IoBulbOutline /> },
