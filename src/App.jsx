@@ -107,6 +107,13 @@ export default function RohanSite() {
               <h2 className="text-lg font-mono text-blue-600 flex items-center gap-2"><IoBulbOutline />Blogs</h2>
               {/* blog content */}
               <ul className="mt-3 list-disc list-inside text-gray-700 space-y-2">
+                
+                <li>
+                <a href="https://medium.com/@rshah.me/from-buzzwords-to-basics-5e230fb48a43" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
+                    From buzzwords to basics
+                </a>
+                </li>
+
                 <li>
                 <a href="https://medium.com/@rshah.me/paradigm-shift-in-observability-ae9de34bc955" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
                     Paradigm shift in observability
