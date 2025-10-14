@@ -47,7 +47,7 @@ export default function RohanSite() {
         <section className="max-w-3xl mx-auto p-6 md:p-10">
           <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="text-4xl md:text-5xl font-mono leading-tight">Rohan Shah</h1>
-            <p className="mt-3 text-xl font-mono text-gray-600">Principal Solutions Engineer • Observability Advocate</p>
+            <p className="mt-3 text-xl font-mono text-gray-600">Director, Solutions Engineering • Observability Advocate</p>
           {/* 
             <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3">
               <a className="font-mono inline-block px-5 py-3 rounded-md bg-blue-600 text-white font-medium" href="mailto:rohanc.shah28@gmail.com">Get in touch</a>
