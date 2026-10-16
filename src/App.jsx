@@ -108,11 +108,17 @@ export default function RohanSite() {
               {/* blog content */}
               <ul className="mt-3 list-disc list-inside text-gray-700 space-y-2">
                 <li>
+                <a href="https://medium.com/@rshah.me/platform-agnostic-observability-freedom-or-fantasy-d0e740b3c9a1" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
+                    Platform Agnostic Observability: Freedom or Fantasy?
+                </a>
+                </li>
+
+                <li>
                 <a href="https://medium.com/@rshah.me/build-or-buy-the-cost-of-reinventing-observability-0883a5f252d8" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
                     Build or buy: The Cost of Reinventing Observability
                 </a>
                 </li>
-
+                
                 <li>
                 <a href="https://medium.com/@rshah.me/from-buzzwords-to-basics-5e230fb48a43" target="_blank" rel="noopener noreferrer" className="font-mono text-black-600 hover:underline">
                     From buzzwords to basics
