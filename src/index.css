@@ -1,2 +1,43 @@
 @import "tailwindcss";
 @config "../tailwind.config.cjs";
+
+.site-shell {
+  --page-bg: #f9fafb;
+  --page-text: #111827;
+  --muted-text: #4b5563;
+  --body-text: #374151;
+  --panel-bg: #ffffff;
+  --panel-border: #e5e7eb;
+  --chip-bg: #f3f4f6;
+  --link-color: #111827;
+  --nav-hover: #e5e7eb;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--page-text);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.site-shell.theme-dark {
+  --page-bg: #111827;
+  --page-text: #e5e7eb;
+  --muted-text: #a6b0c0;
+  --body-text: #cbd5e1;
+  --panel-bg: #1b2638;
+  --panel-border: #334155;
+  --chip-bg: #263449;
+  --link-color: #e5e7eb;
+  --nav-hover: #263449;
+}
+
+.site-muted { color: var(--muted-text); }
+.site-body-text { color: var(--body-text); }
+.site-content-link { color: var(--link-color); }
+.site-panel { background: var(--panel-bg); border: 1px solid var(--panel-border); }
+.site-chip { background: var(--chip-bg); color: var(--body-text); }
+.site-nav-link { color: var(--muted-text); }
+.site-nav-link:hover, .theme-toggle:hover { background: var(--nav-hover); }
+.theme-toggle { color: var(--muted-text); font-size: 1.1rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .site-shell { transition: none; }
+}
