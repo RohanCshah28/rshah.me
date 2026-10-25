@@ -74,20 +74,19 @@ export default function RohanSite() {
 
             <div>
               <h4 className="mt-6 text-lg md:text-lg font-mono leading-tight text-blue-600">About</h4>
-              <p className="mt-3 text-md font-mono site-body-text">With a strong background in driving digital transformation and enhancing system reliability, I am passionate for innovating solutions that reduce toil and increase efficiency.</p>
-              <p className="mt-3 text-md font-mono site-body-text">After a decade of experience in the financial industry, I deeply understand the value of observability and proudly advocate for its transformative impact on organizations.</p>
+              <p className="mt-3 text-md font-mono site-body-text">I help organizations improve reliability and get more from observability, drawing on a decade in financial services and a passion for reducing operational toil.</p>
              </div>
             <div className="site-panel mt-10 font-mono rounded-lg shadow-lg p-6">
-              <h2 className="text-lg font-mono mb-2 text-blue-600">~/now</h2>
+              <h2 className="text-lg font-mono mb-2 text-blue-600">Now</h2>
               <TypeWriter
-                text={`SSpecializing in Log management & analytics at scale, driving complex sales wins, mentoring and enabling field engineers, advising customers, and influencing product and brand strategy.`}
+                text={`Leading log management and analytics at scale, driving strategic customer outcomes, and developing field engineering teams.`}
                 speed={30}
               />
             </div>
 
             <div className="site-panel mt-10 font-mono rounded-lg shadow-lg p-6">
             <h2 className="text-lg font-mono text-blue-600 flex items-center gap-2"><FiLink2 />Featured Content</h2>
-            <ul className="mt-3 list-disc list-inside site-body-text space-y-2">
+            <ul className="feature-list mt-3 site-body-text space-y-2">
                 <li>
                 <a href="https://lnkd.in/p/gaSWNFum" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
                     SKO 2026 - President’s Club Award
@@ -98,41 +97,37 @@ export default function RohanSite() {
                     Perform 2026 - AI-powered log monitoring at petabyte-scale precision
                 </a>
                 </li>
-                <li>
-                    <a href="https://www.dynatrace.com/perform/on-demand/perform-2025/?_location=ALL&topics=Automation&industries=ALL&jobTitles=ALL&level=ALL&track=ALL&session=from-alerts-to-action-with-red-hat-and-dynatrace" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
-                    Perform 2025 - From alerts to answers with Red Hat & Dynatrace
-                </a>
-                </li>
-                <li>
-                <a href="https://www.linkedin.com/posts/rohan-shah-sre_proudtoworkatbmo-activity-7158972987197562880-CKrg" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
-                    Perform 2024 - Dynatrace Lead R&D Award
-                </a>
-                </li>
-                <li>
-                <a href="https://www.linkedin.com/posts/rohan-shah-sre_ansible-dynatrace-ansibleautomates-activity-7186805598636683264-jV_i?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
-                    Ansible Automates 2024 - Automated remediation using Dynatrace
-                </a>
-                </li>
-                <li>
-                <a href="https://www.dynatrace.com/info/series/bank-of-montreal-digital-first-strategy/" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
-                    Dynatrace Webinar - BMO's digital first strategy
-                </a>
-                </li>
-
             </ul>
+            <details className="site-disclosure mt-4">
+              <summary>More featured content</summary>
+              <ul className="feature-list mt-3 site-body-text space-y-2">
+                <li><a href="https://www.dynatrace.com/perform/on-demand/perform-2025/?_location=ALL&topics=Automation&industries=ALL&jobTitles=ALL&level=ALL&track=ALL&session=from-alerts-to-action-with-red-hat-and-dynatrace" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">Perform 2025 - From alerts to answers with Red Hat &amp; Dynatrace</a></li>
+                <li><a href="https://www.linkedin.com/posts/rohan-shah-sre_proudtoworkatbmo-activity-7158972987197562880-CKrg" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">Perform 2024 - Dynatrace Lead R&amp;D Award</a></li>
+                <li><a href="https://www.linkedin.com/posts/rohan-shah-sre_ansible-dynatrace-ansibleautomates-activity-7186805598636683264-jV_i?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">Ansible Automates 2024 - Automated remediation using Dynatrace</a></li>
+                <li><a href="https://www.dynatrace.com/info/series/bank-of-montreal-digital-first-strategy/" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">Dynatrace Webinar - BMO’s digital first strategy</a></li>
+              </ul>
+            </details>
             </div>
-            <div className="mt-6">
-              <h3 className="text-sm font-mono text-blue-600">Skills</h3>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {['Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'FinOps', 'Kubernetes', 'Chaos Engineering', 'Strategic Sales', 'Enterprise Growth', 'Solutions Engineering Leadership', 'Go-to-Market Strategy', 'Executive Advisory', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy'].map((s) => (
-                  <span key={s} className="font-mono text-sm px-3 py-1 site-chip rounded-full">{s}</span>
+            <details className="site-panel site-disclosure mt-6 rounded-lg p-6">
+              <summary><span className="text-blue-600">Skills</span><span className="site-muted summary-note">Business · leadership · technical</span></summary>
+              <div className="skills-groups mt-5">
+                {[
+                  ['Business', ['Strategic Sales', 'Mergers & Acquisitions', 'Go-to-Market Strategy', 'FinOps']],
+                  ['Leadership', ['Solutions Engineering Leadership', 'Executive Advisory', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy']],
+                  ['Technical', ['Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'Chaos Engineering']],
+                ].map(([group, skills]) => (
+                  <div key={group}>
+                    <h3 className="mb-2 text-sm font-mono text-blue-600">{group}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skills.map((skill) => <span key={skill} className="font-mono text-sm px-3 py-1 site-chip rounded-full">{skill}</span>)}
+                    </div>
+                  </div>
                 ))}
               </div>
-            </div>
+            </details>
             <section id="blogs">
-              <div className="site-panel mt-10 rounded-lg shadow-sm p-6">
-              <h2 className="text-lg font-mono text-blue-600 flex items-center gap-2"><IoBulbOutline />Blogs</h2>
-              {/* blog content */}
+              <details className="site-panel site-disclosure mt-6 rounded-lg shadow-sm p-6">
+              <summary><span className="inline-flex items-center gap-2 text-blue-600"><IoBulbOutline />Writing</span><span className="site-muted summary-note">5 articles</span></summary>
               <ul className="mt-3 list-disc list-inside site-body-text space-y-2">
                 <li>
                 <a href="https://medium.com/@rshah.me/platform-agnostic-observability-freedom-or-fantasy-d0e740b3c9a1" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
@@ -164,7 +159,7 @@ export default function RohanSite() {
                 </a>
                 </li>
               </ul>
-              </div>
+              </details>
             </section>
 
 

@@ -55,6 +55,30 @@ html[data-theme='dark'] body {
 .site-nav-link:hover, .theme-toggle:hover { background: var(--nav-hover); }
 .theme-toggle { color: var(--muted-text); font-size: 1.1rem; }
 
+.site-disclosure > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--body-text);
+}
+
+.site-disclosure > summary::-webkit-details-marker { display: none; }
+.site-disclosure > summary::after { content: '+'; color: #2563eb; font-size: 1.15rem; }
+.site-disclosure[open] > summary::after { content: '−'; }
+.site-disclosure > summary:focus-visible { outline: 2px solid #2563eb; outline-offset: 4px; border-radius: 2px; }
+.summary-note { font-size: 0.75rem; text-align: right; }
+.skills-groups { display: grid; gap: 1.25rem; }
+.feature-list { list-style: none; padding: 0; }
+.feature-list li { padding: 0.65rem 0; border-bottom: 1px solid var(--panel-border); }
+.feature-list li:last-child { border-bottom: 0; }
+
+@media (min-width: 640px) {
+  .skills-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .site-shell { transition: none; }
 }
