@@ -18,16 +18,16 @@ const certifications = [
 ];
 
 const awards = [
-  { name: 'Dynatrace President’s Club FY26', issuer: 'Dynatrace', date: 'Apr 2026', associatedWith: 'Dynatrace', badge: 'dynatrace-trophy.svg' },
-  { name: 'BMO Annual Ambition 2025 Award', issuer: 'BMO', date: 'Jan 2024', associatedWith: 'BMO', badge: 'bmo-trophy.svg' },
-  { name: 'Lead R&D Innovator Award', issuer: 'Dynatrace', date: 'Jan 2024', associatedWith: 'BMO', badge: 'dynatrace-trophy.svg' },
-  { name: 'BMO Spotlight Award - Q1 2023', issuer: 'BMO', date: 'Feb 2023', associatedWith: 'BMO', badge: 'bmo-trophy.svg' },
-  { name: 'BMO Spotlight Award - Q4 2022', issuer: 'BMO', date: 'Dec 2022', associatedWith: 'BMO', badge: 'bmo-trophy.svg' },
-  { name: 'RBC Leadership Model Award - Year End 2020', issuer: 'RBC Wealth Management', date: 'Dec 2020', associatedWith: 'RBC', badge: 'rbc-trophy.svg' },
-  { name: 'RBC Performance Award - Q2 2020', issuer: 'RBC Wealth Management', date: 'May 2020', associatedWith: 'RBC', badge: 'rbc-trophy.svg' },
-  { name: 'RBC Performance Award - Q2 2019', issuer: 'RBC Global Asset Management', date: 'Mar 2019', associatedWith: 'RBC', badge: 'rbc-trophy.svg' },
-  { name: 'RBC Performance Award - Q3 2018', issuer: 'RBC', date: 'Jun 2018', associatedWith: 'RBC', badge: 'rbc-trophy.svg' },
-  { name: 'Make A Difference (MAD) Award', issuer: 'RBC', date: 'Apr 2018', associatedWith: 'RBC', badge: 'rbc-trophy.svg' },
+  { name: 'Dynatrace President’s Club FY26', badge: 'dynatrace-trophy.svg' },
+  { name: 'BMO Annual Ambition 2025', badge: 'bmo-trophy.svg' },
+  { name: 'Dynatrace Lead R&D Innovator', badge: 'dynatrace-trophy.svg' },
+  { name: 'BMO Spotlight - Q1 2023', badge: 'bmo-trophy.svg' },
+  { name: 'BMO Spotlight - Q4 2022', badge: 'bmo-trophy.svg' },
+  { name: 'RBC Leadership Model - Year End 2020', badge: 'rbc-trophy.svg' },
+  { name: 'RBC Performance - Q2 2020', badge: 'rbc-trophy.svg' },
+  { name: 'RBC Performance - Q2 2019', badge: 'rbc-trophy.svg' },
+  { name: 'RBC Performance - Q3 2018', badge: 'rbc-trophy.svg' },
+  { name: 'Make A Difference (MAD)', badge: 'rbc-trophy.svg' },
 ];
 
 export default function RohanSite() {
@@ -151,11 +151,10 @@ export default function RohanSite() {
             <section className="site-panel mt-6 font-mono rounded-lg shadow-lg p-6" aria-labelledby="awards-title">
               <h2 id="awards-title" className="text-lg font-mono text-blue-600">Awards</h2>
               <div className="certification-grid mt-5">
-                {awards.map(({ name, issuer, date, associatedWith, badge }) => (
+                {awards.map(({ name, badge }) => (
                   <div className="certification-item" key={name}>
                     <img className="certification-badge" src={`/badges/${badge}`} alt="" />
                     <p className="certification-name site-body-text">{name}</p>
-                    <p className="award-meta site-muted">Issued by {issuer} · {date}<br />Associated with {associatedWith}</p>
                   </div>
                 ))}
               </div>
