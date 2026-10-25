@@ -125,9 +125,9 @@ export default function RohanSite() {
               <h2 className="text-lg font-mono text-blue-600">Skills</h2>
               <div className="skills-groups mt-5">
                 {[
-                  ['Business', ['Strategic Sales', 'Mergers & Acquisitions', 'Go-to-Market Strategy', 'FinOps']],
-                  ['Leadership', ['Solutions Engineering Leadership', 'Executive Advisory', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy']],
-                  ['Technical', ['Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'Chaos Engineering']],
+                  ['Business', ['Strategic Sales', 'Mergers & Acquisitions', 'Go-to-Market Strategy', 'FinOps', 'Executive Advisory']],
+                  ['Leadership', ['Solutions Engineering Leadership', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy']],
+                  ['Technical', ['Observability', 'AI Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'Chaos Engineering']],
                 ].map(([group, skills]) => (
                   <div key={group}>
                     <h3 className="mb-2 text-sm font-mono text-blue-600">{group}</h3>
