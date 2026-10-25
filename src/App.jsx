@@ -19,8 +19,8 @@ const certifications = [
 
 const awards = [
   { name: 'Dynatrace President’s Club - 2026', badge: 'dynatrace-trophy-green.svg' },
-  { name: 'BMO Annual Ambition - 2025', badge: 'bmo-trophy.svg' },
   { name: 'Dynatrace Lead R&D Innovator - 2024', badge: 'dynatrace-trophy-green.svg' },
+  { name: 'BMO Annual Ambition - 2023', badge: 'bmo-trophy.svg' },
   { name: 'BMO Spotlight - Q1 2023', badge: 'bmo-trophy.svg' },
   { name: 'BMO Spotlight - Q4 2022', badge: 'bmo-trophy.svg' },
   { name: 'RBC Leadership Model - 2020', badge: 'rbc-trophy.svg' },
