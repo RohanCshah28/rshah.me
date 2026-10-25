@@ -18,16 +18,16 @@ const certifications = [
 ];
 
 const awards = [
-  { name: 'Dynatrace President’s Club FY26', badge: 'dynatrace-trophy.svg' },
-  { name: 'BMO Annual Ambition 2025', badge: 'bmo-trophy.svg' },
-  { name: 'Dynatrace Lead R&D Innovator', badge: 'dynatrace-trophy.svg' },
+  { name: 'Dynatrace President’s Club - 2026', badge: 'dynatrace-trophy-green.svg' },
+  { name: 'BMO Annual Ambition - 2025', badge: 'bmo-trophy.svg' },
+  { name: 'Dynatrace Lead R&D Innovator - 2024', badge: 'dynatrace-trophy-green.svg' },
   { name: 'BMO Spotlight - Q1 2023', badge: 'bmo-trophy.svg' },
   { name: 'BMO Spotlight - Q4 2022', badge: 'bmo-trophy.svg' },
-  { name: 'RBC Leadership Model - Year End 2020', badge: 'rbc-trophy.svg' },
+  { name: 'RBC Leadership Model - 2020', badge: 'rbc-trophy.svg' },
   { name: 'RBC Performance - Q2 2020', badge: 'rbc-trophy.svg' },
   { name: 'RBC Performance - Q2 2019', badge: 'rbc-trophy.svg' },
   { name: 'RBC Performance - Q3 2018', badge: 'rbc-trophy.svg' },
-  { name: 'Make A Difference (MAD)', badge: 'rbc-trophy.svg' },
+  { name: 'Make A Difference (MAD) - 2017', badge: 'rbc-trophy.svg' },
 ];
 
 export default function RohanSite() {
