@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Award trophy badge">
+  <circle cx="64" cy="58" r="51" fill="#fee2e2"/>
+  <circle cx="64" cy="58" r="46" fill="none" stroke="#e31837" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M43 25h42v14c0 15-8 26-21 26S43 54 43 39V25Z" fill="#e31837"/>
+  <path d="M43 31H29v10c0 13 8 21 20 21M85 31h14v10c0 13-8 21-20 21" fill="none" stroke="#e31837" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M58 65h12v14H58zM48 79h32v8H48zM42 88h44v9H42z" fill="#e31837"/>
+  <path d="m64 32 2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L64 32Z" fill="#fff"/>
+</svg>
