@@ -5,6 +5,18 @@ import { BsFiletypePdf } from "react-icons/bs";
 import { IoBulbOutline } from "react-icons/io5";
 import TypeWriter from './components/TypeWriter';
 
+const certifications = [
+  { name: 'FinOps Certified Practitioner', badge: 'finops.svg' },
+  { name: 'AWS Certified Solutions Architect Associate', badge: 'aws-solutions-architect.svg' },
+  { name: 'AWS Certified Cloud Practitioner', badge: 'aws-cloud-practitioner.svg' },
+  { name: 'Certified SAFe® 6 Agilist', badge: 'safe.svg' },
+  { name: 'Dynatrace Associate', badge: 'dynatrace.svg' },
+  { name: 'Lean Six Sigma Yellow Belt', badge: 'six-sigma.svg' },
+  { name: 'Certified ScrumMaster (CSM)', badge: 'scrum.svg' },
+  { name: 'Blue Prism Certified Developer - AD01', badge: 'blue-prism.svg' },
+  { name: 'ITIL v3', badge: 'itil.svg' },
+];
+
 export default function RohanSite() {
   const [theme, setTheme] = useState(() => {
     try { return localStorage.getItem('rshah-theme') === 'dark' ? 'dark' : 'light'; }
@@ -121,6 +133,17 @@ export default function RohanSite() {
 
             </ul>
             </div>
+            <section className="site-panel mt-6 font-mono rounded-lg shadow-lg p-6" aria-labelledby="certifications-title">
+              <h2 id="certifications-title" className="text-lg font-mono text-blue-600">Certifications</h2>
+              <div className="certification-grid mt-5">
+                {certifications.map(({ name, badge }) => (
+                  <div className="certification-item" key={name}>
+                    <img className="certification-badge" src={`/badges/${badge}`} alt="" />
+                    <p className="certification-name site-body-text">{name}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
             <div className="site-panel mt-6 rounded-lg p-6">
               <h2 className="text-lg font-mono text-blue-600">Skills</h2>
               <div className="skills-groups mt-5">
