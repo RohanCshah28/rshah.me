@@ -13,6 +13,11 @@ export default function RohanSite() {
 
   useEffect(() => {
     try { localStorage.setItem('rshah-theme', theme); } catch { /* storage can be unavailable */ }
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    document.body.dataset.theme = theme;
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) themeColor.setAttribute('content', theme === 'dark' ? '#111827' : '#f9fafb');
   }, [theme]);
 
   const links = [
@@ -35,7 +40,7 @@ export default function RohanSite() {
               <a
                 key={l.label}
                 href={l.href}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-md text-sm hover:bg-gray-200"
+                className="site-nav-link inline-flex items-center gap-2 px-3 py-1 rounded-md text-sm"
                 {...(!isHashLink && { target: "_blank", rel: "noreferrer" })}
                 onClick={(e) => {
                   if (isHashLink) {
@@ -119,7 +124,7 @@ export default function RohanSite() {
             <div className="mt-6">
               <h3 className="text-sm font-mono text-blue-600">Skills</h3>
               <div className="mt-3 flex flex-wrap gap-2">
-                {['Observability', 'Log Management & Analytics','Solution Architect', 'SRE', 'FinOps', 'Kubernetes', 'Chaos Engineering', 'DevOps', 'CI/CD'].map((s) => (
+                {['Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'FinOps', 'Kubernetes', 'Chaos Engineering', 'Strategic Sales', 'Enterprise Growth', 'Solutions Engineering Leadership', 'Go-to-Market Strategy', 'Executive Advisory', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy'].map((s) => (
                   <span key={s} className="font-mono text-sm px-3 py-1 site-chip rounded-full">{s}</span>
                 ))}
               </div>

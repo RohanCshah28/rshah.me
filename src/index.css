@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @config "../tailwind.config.cjs";
 
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+html,
+body {
+  background: #f9fafb;
+}
+
+html[data-theme='dark'],
+html[data-theme='dark'] body {
+  background: #111827;
+}
+
 .site-shell {
   --page-bg: #f9fafb;
   --page-text: #111827;
