@@ -17,6 +17,19 @@ const certifications = [
   { name: 'ITIL v3', badge: 'itil.svg' },
 ];
 
+const awards = [
+  { name: 'Dynatrace President’s Club FY26', issuer: 'Dynatrace', date: 'Apr 2026', associatedWith: 'Dynatrace', badge: 'dynatrace-trophy.svg' },
+  { name: 'BMO Annual Ambition 2025 Award', issuer: 'BMO', date: 'Jan 2024', associatedWith: 'BMO', badge: 'bmo-trophy.svg' },
+  { name: 'Lead R&D Innovator Award', issuer: 'Dynatrace', date: 'Jan 2024', associatedWith: 'BMO', badge: 'dynatrace-trophy.svg' },
+  { name: 'BMO Spotlight Award - Q1 2023', issuer: 'BMO', date: 'Feb 2023', associatedWith: 'BMO', badge: 'bmo-trophy.svg' },
+  { name: 'BMO Spotlight Award - Q4 2022', issuer: 'BMO', date: 'Dec 2022', associatedWith: 'BMO', badge: 'bmo-trophy.svg' },
+  { name: 'RBC Leadership Model Award - Year End 2020', issuer: 'RBC Wealth Management', date: 'Dec 2020', associatedWith: 'RBC', badge: 'rbc-trophy.svg' },
+  { name: 'RBC Performance Award - Q2 2020', issuer: 'RBC Wealth Management', date: 'May 2020', associatedWith: 'RBC', badge: 'rbc-trophy.svg' },
+  { name: 'RBC Performance Award - Q2 2019', issuer: 'RBC Global Asset Management', date: 'Mar 2019', associatedWith: 'RBC', badge: 'rbc-trophy.svg' },
+  { name: 'RBC Performance Award - Q3 2018', issuer: 'RBC', date: 'Jun 2018', associatedWith: 'RBC', badge: 'rbc-trophy.svg' },
+  { name: 'Make A Difference (MAD) Award', issuer: 'RBC', date: 'Apr 2018', associatedWith: 'RBC', badge: 'rbc-trophy.svg' },
+];
+
 export default function RohanSite() {
   const [theme, setTheme] = useState(() => {
     try { return localStorage.getItem('rshah-theme') === 'dark' ? 'dark' : 'light'; }
@@ -135,6 +148,18 @@ export default function RohanSite() {
               </div>
             </section>
 
+            <section className="site-panel mt-6 font-mono rounded-lg shadow-lg p-6" aria-labelledby="awards-title">
+              <h2 id="awards-title" className="text-lg font-mono text-blue-600">Awards</h2>
+              <div className="certification-grid mt-5">
+                {awards.map(({ name, issuer, date, associatedWith, badge }) => (
+                  <div className="certification-item" key={name}>
+                    <img className="certification-badge" src={`/badges/${badge}`} alt="" />
+                    <p className="certification-name site-body-text">{name}</p>
+                    <p className="award-meta site-muted">Issued by {issuer} · {date}<br />Associated with {associatedWith}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
 
             <section className="site-panel mt-6 font-mono rounded-lg shadow-lg p-6" aria-labelledby="certifications-title">
               <h2 id="certifications-title" className="text-lg font-mono text-blue-600">Certifications</h2>
@@ -147,23 +172,6 @@ export default function RohanSite() {
                 ))}
               </div>
             </section>
-            <div className="site-panel mt-6 rounded-lg p-6">
-              <h2 className="text-lg font-mono text-blue-600">Skills</h2>
-              <div className="skills-groups mt-5">
-                {[
-                  ['Business', ['Strategic Sales', 'Mergers & Acquisitions', 'Go-to-Market Strategy', 'FinOps', 'Executive Advisory']],
-                  ['Leadership', ['Solutions Engineering Leadership', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy']],
-                  ['Technical', ['Observability', 'AI Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'Chaos Engineering']],
-                ].map(([group, skills]) => (
-                  <div key={group}>
-                    <h3 className="mb-2 text-sm font-mono text-blue-600">{group}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {skills.map((skill) => <span key={skill} className="font-mono text-sm px-3 py-1 site-chip rounded-full">{skill}</span>)}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
             <div className="site-panel mt-10 font-mono rounded-lg shadow-lg p-6">
             <h2 className="text-lg font-mono text-blue-600 flex items-center gap-2"><FiLink2 />Featured Content</h2>
             <ul className="mt-3 list-disc list-inside site-body-text space-y-2">
@@ -199,6 +207,23 @@ export default function RohanSite() {
                 </li>
 
             </ul>
+            </div>
+            <div className="site-panel mt-6 rounded-lg p-6">
+              <h2 className="text-lg font-mono text-blue-600">Skills</h2>
+              <div className="skills-groups mt-5">
+                {[
+                  ['Business', ['Strategic Sales', 'Mergers & Acquisitions', 'Go-to-Market Strategy', 'FinOps', 'Executive Advisory']],
+                  ['Leadership', ['Solutions Engineering Leadership', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy']],
+                  ['Technical', ['Observability', 'AI Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'Chaos Engineering']],
+                ].map(([group, skills]) => (
+                  <div key={group}>
+                    <h3 className="mb-2 text-sm font-mono text-blue-600">{group}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skills.map((skill) => <span key={skill} className="font-mono text-sm px-3 py-1 site-chip rounded-full">{skill}</span>)}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             <footer className="mt-10 text-sm site-muted">© {new Date().getFullYear()} Rohan Shah</footer>
           </motion.div>
