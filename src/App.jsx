@@ -77,7 +77,7 @@ export default function RohanSite() {
           <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="text-4xl md:text-5xl font-mono leading-tight">Rohan Shah</h1>
             <p className="mt-3 text-xl font-mono site-muted">Director, Solutions Engineering • Observability Advocate</p>
-          {/* 
+          {/*
             <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3">
               <a className="font-mono inline-block px-5 py-3 rounded-md bg-blue-600 text-white font-medium" href="mailto:rohanc.shah28@gmail.com">Get in touch</a>
               <a className="font-mono inline-block px-5 py-3 rounded-md border border-gray-200 text-gray-800" href="/resume.pdf">Download résumé</a>
@@ -97,6 +97,73 @@ export default function RohanSite() {
               />
             </div>
 
+            <section id="blogs">
+              <div className="site-panel mt-10 rounded-lg shadow-sm p-6">
+              <h2 className="text-lg font-mono text-blue-600 flex items-center gap-2"><IoBulbOutline />Blogs</h2>
+              {/* blog content */}
+              <ul className="mt-3 list-disc list-inside site-body-text space-y-2">
+                <li>
+                <a href="https://medium.com/@rshah.me/platform-agnostic-observability-freedom-or-fantasy-d0e740b3c9a1" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
+                    Platform Agnostic Observability: Freedom or Fantasy?
+                </a>
+                </li>
+
+                <li>
+                <a href="https://medium.com/@rshah.me/build-or-buy-the-cost-of-reinventing-observability-0883a5f252d8" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
+                    Build or buy: The Cost of Reinventing Observability
+                </a>
+                </li>
+
+                <li>
+                <a href="https://medium.com/@rshah.me/from-buzzwords-to-basics-5e230fb48a43" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
+                    From buzzwords to basics
+                </a>
+                </li>
+
+                <li>
+                <a href="https://medium.com/@rshah.me/paradigm-shift-in-observability-ae9de34bc955" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
+                    Paradigm shift in observability
+                </a>
+                </li>
+
+                <li>
+                <a href="https://www.dynatrace.com/news/blog/insights-into-your-azure-devops-pipelines/" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
+                    Insights into your Azure DevOps pipelines
+                </a>
+                </li>
+              </ul>
+              </div>
+            </section>
+
+
+            <section className="site-panel mt-6 font-mono rounded-lg shadow-lg p-6" aria-labelledby="certifications-title">
+              <h2 id="certifications-title" className="text-lg font-mono text-blue-600">Certifications</h2>
+              <div className="certification-grid mt-5">
+                {certifications.map(({ name, badge }) => (
+                  <div className="certification-item" key={name}>
+                    <img className="certification-badge" src={`/badges/${badge}`} alt="" />
+                    <p className="certification-name site-body-text">{name}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+            <div className="site-panel mt-6 rounded-lg p-6">
+              <h2 className="text-lg font-mono text-blue-600">Skills</h2>
+              <div className="skills-groups mt-5">
+                {[
+                  ['Business', ['Strategic Sales', 'Mergers & Acquisitions', 'Go-to-Market Strategy', 'FinOps', 'Executive Advisory']],
+                  ['Leadership', ['Solutions Engineering Leadership', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy']],
+                  ['Technical', ['Observability', 'AI Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'Chaos Engineering']],
+                ].map(([group, skills]) => (
+                  <div key={group}>
+                    <h3 className="mb-2 text-sm font-mono text-blue-600">{group}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skills.map((skill) => <span key={skill} className="font-mono text-sm px-3 py-1 site-chip rounded-full">{skill}</span>)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
             <div className="site-panel mt-10 font-mono rounded-lg shadow-lg p-6">
             <h2 className="text-lg font-mono text-blue-600 flex items-center gap-2"><FiLink2 />Featured Content</h2>
             <ul className="mt-3 list-disc list-inside site-body-text space-y-2">
@@ -133,73 +200,6 @@ export default function RohanSite() {
 
             </ul>
             </div>
-            <section className="site-panel mt-6 font-mono rounded-lg shadow-lg p-6" aria-labelledby="certifications-title">
-              <h2 id="certifications-title" className="text-lg font-mono text-blue-600">Certifications</h2>
-              <div className="certification-grid mt-5">
-                {certifications.map(({ name, badge }) => (
-                  <div className="certification-item" key={name}>
-                    <img className="certification-badge" src={`/badges/${badge}`} alt="" />
-                    <p className="certification-name site-body-text">{name}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-            <div className="site-panel mt-6 rounded-lg p-6">
-              <h2 className="text-lg font-mono text-blue-600">Skills</h2>
-              <div className="skills-groups mt-5">
-                {[
-                  ['Business', ['Strategic Sales', 'Mergers & Acquisitions', 'Go-to-Market Strategy', 'FinOps', 'Executive Advisory']],
-                  ['Leadership', ['Solutions Engineering Leadership', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy']],
-                  ['Technical', ['Observability', 'AI Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'Chaos Engineering']],
-                ].map(([group, skills]) => (
-                  <div key={group}>
-                    <h3 className="mb-2 text-sm font-mono text-blue-600">{group}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {skills.map((skill) => <span key={skill} className="font-mono text-sm px-3 py-1 site-chip rounded-full">{skill}</span>)}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <section id="blogs">
-              <div className="site-panel mt-10 rounded-lg shadow-sm p-6">
-              <h2 className="text-lg font-mono text-blue-600 flex items-center gap-2"><IoBulbOutline />Blogs</h2>
-              {/* blog content */}
-              <ul className="mt-3 list-disc list-inside site-body-text space-y-2">
-                <li>
-                <a href="https://medium.com/@rshah.me/platform-agnostic-observability-freedom-or-fantasy-d0e740b3c9a1" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
-                    Platform Agnostic Observability: Freedom or Fantasy?
-                </a>
-                </li>
-
-                <li>
-                <a href="https://medium.com/@rshah.me/build-or-buy-the-cost-of-reinventing-observability-0883a5f252d8" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
-                    Build or buy: The Cost of Reinventing Observability
-                </a>
-                </li>
-                
-                <li>
-                <a href="https://medium.com/@rshah.me/from-buzzwords-to-basics-5e230fb48a43" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
-                    From buzzwords to basics
-                </a>
-                </li>
-
-                <li>
-                <a href="https://medium.com/@rshah.me/paradigm-shift-in-observability-ae9de34bc955" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
-                    Paradigm shift in observability
-                </a>
-                </li>
-                
-                <li>
-                <a href="https://www.dynatrace.com/news/blog/insights-into-your-azure-devops-pipelines/" target="_blank" rel="noopener noreferrer" className="font-mono site-content-link hover:underline">
-                    Insights into your Azure DevOps pipelines
-                </a>
-                </li>
-              </ul>
-              </div>
-            </section>
-
-
             <footer className="mt-10 text-sm site-muted">© {new Date().getFullYear()} Rohan Shah</footer>
           </motion.div>
         </section>
