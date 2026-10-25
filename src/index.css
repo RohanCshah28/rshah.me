@@ -54,6 +54,11 @@ html[data-theme='dark'] body {
 .site-nav-link { color: var(--muted-text); }
 .site-nav-link:hover, .theme-toggle:hover { background: var(--nav-hover); }
 .theme-toggle { color: var(--muted-text); font-size: 1.1rem; }
+.skills-groups { display: grid; gap: 1.25rem; }
+
+@media (min-width: 640px) {
+  .skills-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .site-shell { transition: none; }

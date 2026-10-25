@@ -121,11 +121,20 @@ export default function RohanSite() {
 
             </ul>
             </div>
-            <div className="mt-6">
-              <h3 className="text-sm font-mono text-blue-600">Skills</h3>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {['Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'FinOps', 'Kubernetes', 'Chaos Engineering', 'Strategic Sales', 'Enterprise Growth', 'Solutions Engineering Leadership', 'Go-to-Market Strategy', 'Executive Advisory', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy'].map((s) => (
-                  <span key={s} className="font-mono text-sm px-3 py-1 site-chip rounded-full">{s}</span>
+            <div className="site-panel mt-6 rounded-lg p-6">
+              <h2 className="text-lg font-mono text-blue-600">Skills</h2>
+              <div className="skills-groups mt-5">
+                {[
+                  ['Business', ['Strategic Sales', 'Mergers & Acquisitions', 'Go-to-Market Strategy', 'FinOps']],
+                  ['Leadership', ['Solutions Engineering Leadership', 'Executive Advisory', 'Field Enablement', 'Team Development & Mentorship', 'Technical Strategy']],
+                  ['Technical', ['Observability', 'Log Management & Analytics', 'Solution Architecture', 'SRE', 'Chaos Engineering']],
+                ].map(([group, skills]) => (
+                  <div key={group}>
+                    <h3 className="mb-2 text-sm font-mono text-blue-600">{group}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skills.map((skill) => <span key={skill} className="font-mono text-sm px-3 py-1 site-chip rounded-full">{skill}</span>)}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
